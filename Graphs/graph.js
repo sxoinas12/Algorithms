@@ -50,6 +50,7 @@ class Graph{
 			if(!vertex) return null;
 			visited[vertex] = true;
 			resultList.push(vertex);
+			console.log(visited)
 			adjacencyList[vertex].forEach(node => {
 				if(!visited[node]){
 					return dfs(node);
@@ -126,5 +127,5 @@ g.addEdge("D","E")
 g.addEdge("D","F")
 g.addEdge("E","F")
 
-let m = g.BFS('A')
+let m = g.DFSRecursive('A')
 console.log(m)
